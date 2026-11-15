@@ -1,0 +1,16 @@
+market,fund,rank,holding,weight_pct,as_of,source
+US,IVV/S&P 500,1,Nvidia,7.44,2026-10-20,slickcharts.com/sp500
+US,IVV/S&P 500,2,Apple,7.05,2026-10-20,slickcharts.com/sp500
+US,IVV/S&P 500,3,Microsoft,5.62,2026-10-20,slickcharts.com/sp500
+US,IVV/S&P 500,4,Amazon,4.03,2026-10-20,slickcharts.com/sp500
+US,IVV/S&P 500,5,Alphabet,5.89,2026-10-20,slickcharts.com/sp500
+Developed ex-US,IEFA,1,ASML Holding,2.80,2026-09-29,stockanalysis.com/etf/iefa/holdings
+Developed ex-US,IEFA,2,HSBC Holdings,1.36,2026-09-29,stockanalysis.com/etf/iefa/holdings
+Developed ex-US,IEFA,3,Roche Holding,1.17,2026-09-29,stockanalysis.com/etf/iefa/holdings
+Developed ex-US,IEFA,4,Shell,1.09,2026-09-29,stockanalysis.com/etf/iefa/holdings
+Developed ex-US,IEFA,5,Novartis,1.05,2026-09-29,stockanalysis.com/etf/iefa/holdings
+Emerging,IEMG,1,Taiwan Semiconductor Manufacturing,13.79,2026-10-16,stockanalysis.com/etf/iemg/holdings
+Emerging,IEMG,2,Samsung Electronics,5.67,2026-10-16,stockanalysis.com/etf/iemg/holdings
+Emerging,IEMG,3,SK hynix,3.95,2026-10-16,stockanalysis.com/etf/iemg/holdings
+Emerging,IEMG,4,Tencent Holdings,2.45,2026-10-16,stockanalysis.com/etf/iemg/holdings
+Emerging,IEMG,5,Alibaba Group Holding,1.74,2026-10-16,stockanalysis.com/etf/iemg/holdings

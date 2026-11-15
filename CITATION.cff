@@ -1,0 +1,20 @@
+cff-version: 1.2.0
+message: "If you use this replication package, please cite the article as below."
+title: "Does AI break the case for broad index investing? Replication package"
+authors:
+  - family-names: Papadogiannis
+    given-names: Agisilaos
+    orcid: "https://orcid.org/0009-0002-7753-7052"
+date-released: 2026-11-15
+version: "1.0"
+license: MIT
+repository-code: "https://github.com/apapadogiannis/ai-broad-index-investing"
+preferred-citation:
+  type: article
+  title: "Does AI break the case for broad index investing? Rent decay, private capital, and deflation"
+  authors:
+    - family-names: Papadogiannis
+      given-names: Agisilaos
+  journal: "The Journal of Beta Investment Strategies"
+  year: 2026
+  status: in-press

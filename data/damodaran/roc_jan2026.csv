@@ -1,0 +1,97 @@
+industry,nfirms,aftertax_roic_unadj,aftertax_roic_lease_rd_adj,normalized_roic_10y
+Advertising,52,61.83,27.72,33.31
+Aerospace/Defense,79,22.64,16.01,12.70
+Air Transport,23,11.58,7.93,11.01
+Apparel,35,19.75,15.77,19.75
+Auto & Truck,33,2.45,2.25,5.53
+Auto Parts,35,12.41,8.98,19.29
+Bank (Money Center),15,NA,NA,NA
+Banks (Regional),568,NA,NA,NA
+Beverage (Alcoholic),14,16.21,15.74,20.20
+Beverage (Soft),27,31.19,29.03,24.61
+Broadcasting,24,15.79,14.57,18.77
+Brokerage & Investment Banking,32,NA,NA,NA
+Building Materials,41,23.00,20.16,22.64
+Business & Consumer Services,155,35.65,28.30,30.96
+Cable TV,9,12.85,12.06,16.06
+Chemical (Basic),29,3.93,3.72,23.40
+Chemical (Diversified),4,4.46,4.05,12.41
+Chemical (Specialty),59,12.15,10.95,15.38
+Coal & Related Energy,16,-5.14,-4.76,4.39
+Computer Services,64,39.28,26.35,37.44
+Computers/Peripherals,36,84.32,44.76,49.78
+Construction Supplies,40,18.98,16.71,16.21
+Diversified,20,15.13,14.82,15.53
+Drugs (Biotechnology),496,7.67,3.53,21.60
+Drugs (Pharmaceutical),228,32.73,16.95,23.52
+Education,32,26.59,15.94,15.26
+Electrical Equipment,112,19.70,15.60,15.70
+Electronics (Consumer & Office),8,-32.35,-8.35,-9.25
+Electronics (General),114,24.48,17.91,17.47
+Engineering/Construction,48,27.66,25.32,14.26
+Entertainment,92,16.15,12.42,14.69
+Environmental & Waste Services,53,35.02,31.75,22.94
+Farming/Agriculture,35,7.73,7.28,10.14
+Financial Svcs. (Non-bank & Insurance),176,NA,NA,NA
+Food Processing,78,17.00,15.95,21.75
+Food Wholesalers,13,21.73,17.84,17.07
+Furn/Home Furnishings,27,13.13,10.59,17.82
+Green & Renewable Energy,15,4.02,3.64,1.82
+Healthcare Products,204,22.55,16.98,16.36
+Healthcare Support Services,104,37.56,31.19,41.07
+Heathcare Information and Technology,115,18.26,13.72,21.84
+Homebuilding,30,14.99,14.91,18.38
+Hospitals/Healthcare Facilities,31,28.65,22.16,18.29
+Hotel/Gaming,63,24.95,14.58,10.14
+Household Products,110,41.54,34.42,36.93
+Information Services,15,27.82,22.17,23.93
+Insurance (General),21,51.29,44.51,27.91
+Insurance (Life),20,10.85,10.77,8.35
+Insurance (Prop/Cas.),57,18.74,18.49,10.19
+Investments & Asset Management,283,15.00,14.25,5.18
+Machinery,105,28.24,24.41,26.59
+Metals & Mining,73,28.46,27.04,13.04
+Office Equipment & Services,14,24.83,18.26,22.23
+Oil/Gas (Integrated),4,8.47,8.45,8.04
+Oil/Gas (Production and Exploration),142,13.92,13.73,5.21
+Oil/Gas Distribution,23,12.50,12.35,7.88
+Oilfield Svcs/Equip.,97,12.52,11.94,12.42
+Packaging & Container,19,15.64,14.82,18.11
+Paper/Forest Products,6,10.36,10.41,14.87
+Power,46,7.05,6.92,6.45
+Precious Metals,56,25.82,25.45,7.24
+Publishing & Newspapers,19,23.20,17.63,15.87
+R.E.I.T.,190,3.68,3.20,2.99
+Real Estate (Development),14,7.22,7.04,3.62
+Real Estate (General/Diversified),12,5.27,5.19,3.85
+Real Estate (Operations & Services),54,7.50,5.94,10.53
+Recreation,49,14.26,8.02,15.73
+Reinsurance,1,10.19,10.14,10.27
+Restaurant/Dining,64,36.81,18.36,22.92
+Retail (Automotive),34,15.50,12.19,15.26
+Retail (Building Supply),14,46.58,34.95,39.33
+Retail (Distributors),62,17.41,16.11,16.12
+Retail (General),23,25.06,13.59,15.18
+Retail (Grocery and Food),15,13.75,6.76,12.29
+Retail (REITs),26,5.46,5.16,4.56
+Retail (Special Lines),94,43.09,21.54,24.98
+Rubber & Tires,3,3.38,3.17,9.81
+Semiconductor,66,41.30,27.23,20.53
+Semiconductor Equip,31,45.31,28.40,34.44
+Shipbuilding & Marine,8,11.99,11.99,10.90
+Shoe,11,24.88,20.93,36.10
+Software (Entertainment),77,46.86,27.02,24.21
+Software (Internet),29,6.10,3.43,4.40
+Software (System & Application),309,54.28,29.32,22.95
+Steel,19,6.88,6.72,20.88
+Telecom (Wireless),12,13.35,10.37,8.61
+Telecom. Equipment,57,53.62,25.47,33.23
+Telecom. Services,39,13.22,12.04,17.38
+Tobacco,10,69.03,63.08,77.69
+Transportation,19,17.34,13.00,16.94
+Transportation (Railroads),4,14.56,14.24,18.19
+Trucking,26,9.44,9.30,15.06
+Utility (General),14,6.12,5.99,6.37
+Utility (Water),14,7.30,7.25,7.04
+Total Market,5994,10.08,8.96,7.72
+Total Market (without financials),4822,18.92,15.07,14.92

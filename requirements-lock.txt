@@ -1,0 +1,7 @@
+# Exact versions under which outputs/results.json was generated (Python 3.13).
+numpy==2.5.3
+pandas==3.0.5
+matplotlib==3.11.2
+statsmodels==0.15.0
+scipy==1.18.1
+patsy==1.0.3
