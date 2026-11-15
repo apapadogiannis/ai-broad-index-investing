@@ -97,8 +97,9 @@ for y in [2000,2005,2010,2015]:
 dec={}
 for dcd,(y0,y1) in {'1996-2000':(1996,2000),'2001-2005':(2001,2005),'2006-2010':(2006,2010),'2011-2015':(2011,2015),'2016-2020':(2016,2020),'2021-2025':(2021,2025)}.items():
     dec[dcd]=sum(adds[str(y)] for y in range(y0,y1+1))/ (y1-y0+1)
-w=[float(r['weight']) for r in csv.DictReader(open(D+'weights/sp500_top274_slickcharts_2026-10-20.csv'))]
-res['e6']=dict(adds_per_year=dec,survival=surv,top10=sum(w[:10]),top50=sum(w[:50]),vt_top10=22.45,vt_holdings=10242)
+# S&P 500 concentration on October 20, 2026: summed weight (%) of the 10 and 50 largest constituents (slickcharts.com/sp500)
+sp_top10=38.56; sp_top50=63.94
+res['e6']=dict(adds_per_year=dec,survival=surv,top10=sp_top10,top50=sp_top50,vt_top10=22.45,vt_holdings=10242)
 with open(OUT+'exhibit8.tex','w') as f:
     f.write("\\begin{tabular}{@{}lr@{}}\n\\toprule\nMeasure & Value \\\\\n\\midrule\n")
     ai=sum(adds[str(y)] for y in range(2023,2026))+adds['2026']; ai_rate=ai/(3+8/12)
@@ -109,7 +110,7 @@ with open(OUT+'exhibit8.tex','w') as f:
     f.write("\\addlinespace\n\\multicolumn{2}{@{}l}{\\textit{Members at year-end still members in August 2026}} \\\\\n")
     for y,(n,s) in surv.items(): f.write(f"\\quad End of {y} & {s} of {n} ({100*s/n:.0f}\\%) \\\\\n")
     f.write("\\addlinespace\n\\multicolumn{2}{@{}l}{\\textit{Concentration, October 2026}} \\\\\n")
-    f.write(f"\\quad S\\&P 500: weight of the ten largest & {sum(w[:10]):.1f}\\% \\\\\n\\quad S\\&P 500: weight of the fifty largest & {sum(w[:50]):.1f}\\% \\\\\n\\quad Global all-cap (VT, 10,242 stocks): weight of the ten largest & 22.4\\% \\\\\n")
+    f.write(f"\\quad S\\&P 500: weight of the ten largest & {sp_top10:.1f}\\% \\\\\n\\quad S\\&P 500: weight of the fifty largest & {sp_top50:.1f}\\% \\\\\n\\quad Global all-cap (VT, 10,242 stocks): weight of the ten largest & 22.4\\% \\\\\n")
     f.write("\\bottomrule\n\\end{tabular}\n")
 # ---------- Exhibit 9: rate sensitivity ----------
 y=pd.read_csv(D+'real10y_monthend.csv'); y['Year']=y.month.str[:4].astype(int); y['Month']=y.month.str[5:].astype(int)

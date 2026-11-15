@@ -3,7 +3,7 @@
 [![SSRN](https://img.shields.io/badge/SSRN-10.2139%2Fssrn.6058896-1f4e79)](https://doi.org/10.2139/ssrn.6058896)
 [![replication](https://github.com/apapadogiannis/ai-broad-index-investing/actions/workflows/replicate.yml/badge.svg)](https://github.com/apapadogiannis/ai-broad-index-investing/actions/workflows/replicate.yml)
 
-Replication package for the article by Agisilaos Papadogiannis (2026), forthcoming in *The Journal of Beta Investment Strategies*.
+Replication package for the article by Agisilaos Papadogiannis, forthcoming in *The Journal of Beta Investment Strategies* (2027).
 Title and abstract: `paper/abstract.pdf`; also on SSRN: [doi:10.2139/ssrn.6058896](https://doi.org/10.2139/ssrn.6058896).
 The article is copyright PMR and its text is not distributed here; this repository holds the code and the data behind its empirical exhibits, so that every reported number can be reproduced.
 
@@ -88,7 +88,7 @@ Code: MIT License. `outputs/results.json`: CC BY 4.0, cite the article.
 
 ## Citation
 
-> Papadogiannis, A. (2026). "Does AI break the case for broad index investing? Rent decay,
+> Papadogiannis, A. (2027). "Does AI break the case for broad index investing? Rent decay,
 > private capital, and deflation." *The Journal of Beta Investment Strategies*, forthcoming.
 > SSRN: https://doi.org/10.2139/ssrn.6058896
 
