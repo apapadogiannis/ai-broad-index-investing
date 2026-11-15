@@ -1,0 +1,25 @@
+{
+  "title": "Does AI break the case for broad index investing? Rent decay, private capital, and deflation: replication package",
+  "upload_type": "software",
+  "description": "Replication package for the article forthcoming in The Journal of Beta Investment Strategies. Code and input data that reproduce every number in the article's empirical exhibits: return on invested capital by scarcity layer, sector composition of US, developed ex-US, emerging and world markets, returns of capitalization-weighted, equal-weighted, AI-themed and bottleneck funds since the release of ChatGPT, S&P 500 replacements and concentration, sensitivity of fund returns to the 10-year real yield, and real asset returns by inflation regime, 1928 to 2025. The article text is copyright PMR and is not included. Third-party input data remain the property of their sources and are included for replication only; the code is MIT-licensed.",
+  "creators": [
+    {
+      "name": "Papadogiannis, Agisilaos",
+      "orcid": "0009-0002-7753-7052"
+    }
+  ],
+  "keywords": ["artificial intelligence", "index investing", "capitalization weighting", "scarcity rents", "private capital", "deflation", "Bitcoin", "gold"],
+  "license": "MIT",
+  "related_identifiers": [
+    {
+      "relation": "isSupplementTo",
+      "identifier": "https://github.com/apapadogiannis/ai-broad-index-investing",
+      "scheme": "url"
+    },
+    {
+      "relation": "isSupplementTo",
+      "identifier": "10.2139/ssrn.6058896",
+      "scheme": "doi"
+    }
+  ]
+}
