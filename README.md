@@ -50,7 +50,7 @@ pip install -r requirements.txt
 The scripts are deterministic. Re-running them reproduces `outputs/results.json` and
 writes the LaTeX table bodies (`outputs/exhibit5.tex` to `exhibit10.tex`) and the two
 figures (`figures/`), which are generated locally and not tracked. A GitHub Actions
-workflow re-runs the pipeline on every push and fails if `results.json` differs from the
+workflow re-runs the pipeline on every push and once a month and fails if `results.json` differs from the
 committed file.
 
 | Script | What it produces | Where it appears |
@@ -71,6 +71,26 @@ The keys of `outputs/results.json` are named after the exhibits
 (`exhibit5_roic_by_layer`, ..., `exhibit10_inflation_regimes`). The AI period is
 December 2022 to September 2026 (46 months); fund data run from January 2018 to
 September 2026.
+
+## How the check works
+
+1. `outputs/results.json` and `data/etf_monthly.csv` are stored in this repository exactly as they were when the
+   article's numbers were taken from them.
+2. `./run_all.sh` reruns every script on the files in `data/` and overwrites those files with
+   freshly computed ones.
+3. `git diff --exit-code -- outputs/results.json data/etf_monthly.csv` then compares each fresh file with the
+   stored version, character by character. If nothing is printed, they are identical; any
+   difference is listed and counts as a failure.
+
+The workflow behind the badge does exactly these three steps on a new machine with the pinned
+package versions, on every push and once a month, so a green badge means the stored
+files still follow from the data and code. The stored files are also frozen in the Zenodo
+archive, which cannot be altered after release.
+
+Two limits. The comparison is between regenerated and stored files, not with the article's
+PDF: to connect the two, use the script table above, which says where each output appears in
+the article. And the figures and LaTeX table bodies are written locally from the same values but are
+not stored here, so they are not part of the comparison.
 
 ## Data and licensing
 
