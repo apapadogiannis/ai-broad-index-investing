@@ -1,16 +1,13 @@
-# Does AI break the case for broad index investing?
+# Does AI Break the Case for Broad Index Investing? Rent Decay, Private Capital, and Deflation
 
-[![SSRN](https://img.shields.io/badge/SSRN-10.2139%2Fssrn.6058896-blue)](https://doi.org/10.2139/ssrn.6058896)
+[![SSRN](https://img.shields.io/badge/SSRN-10.2139%2Fssrn.6058896-1f4e79)](https://doi.org/10.2139/ssrn.6058896)
 [![replication](https://github.com/apapadogiannis/ai-broad-index-investing/actions/workflows/replicate.yml/badge.svg)](https://github.com/apapadogiannis/ai-broad-index-investing/actions/workflows/replicate.yml)
 
-Replication package for the article by Agisilaos Papadogiannis (2026), forthcoming in
-*The Journal of Beta Investment Strategies*. Title and abstract on SSRN:
-[doi:10.2139/ssrn.6058896](https://doi.org/10.2139/ssrn.6058896). The article is copyright
-PMR and its text is not distributed here; this repository holds the code and the data
-behind its empirical exhibits, so that every reported number can be reproduced.
-Title and abstract: `paper/abstract.pdf`.
+Replication package for the article by Agisilaos Papadogiannis (2026), forthcoming in *The Journal of Beta Investment Strategies*.
+Title and abstract: `paper/abstract.pdf`; also on SSRN: [doi:10.2139/ssrn.6058896](https://doi.org/10.2139/ssrn.6058896).
+The article is copyright PMR and its text is not distributed here; this repository holds the code and the data behind its empirical exhibits, so that every reported number can be reproduced.
 
-## Abstract
+## What this is
 
 Does AI break the case for holding a broad capitalization-weighted index? A common claim
 says it does: AI shortens competitive advantage, lets firms grow without listing, and
