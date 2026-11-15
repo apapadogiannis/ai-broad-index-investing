@@ -1,10 +1,12 @@
 # Does AI Break the Case for Broad Index Investing? Rent Decay, Private Capital, and Deflation
 
+[![Zenodo](https://img.shields.io/badge/Zenodo-10.5281%2Fzenodo.24240516-007ec6)](https://doi.org/10.5281/zenodo.24240516)
 [![SSRN](https://img.shields.io/badge/SSRN-10.2139%2Fssrn.6058896-1f4e79)](https://doi.org/10.2139/ssrn.6058896)
 [![replication](https://github.com/apapadogiannis/ai-broad-index-investing/actions/workflows/replicate.yml/badge.svg)](https://github.com/apapadogiannis/ai-broad-index-investing/actions/workflows/replicate.yml)
 
 Replication package for the article by Agisilaos Papadogiannis, forthcoming in *The Journal of Beta Investment Strategies* (2027).
 Title and abstract: `paper/abstract.pdf`; also on SSRN: [doi:10.2139/ssrn.6058896](https://doi.org/10.2139/ssrn.6058896).
+Archived on Zenodo: [doi:10.5281/zenodo.24240516](https://doi.org/10.5281/zenodo.24240516) (v1.0).
 The article is copyright PMR and its text is not distributed here; this repository holds the code and the data behind its empirical exhibits, so that every reported number can be reproduced.
 
 ## What this is
@@ -91,6 +93,11 @@ Code: MIT License. `outputs/results.json`: CC BY 4.0, cite the article.
 > Papadogiannis, A. (2027). "Does AI break the case for broad index investing? Rent decay,
 > private capital, and deflation." *The Journal of Beta Investment Strategies*, forthcoming.
 > SSRN: https://doi.org/10.2139/ssrn.6058896
+
+Code and data:
+
+> Papadogiannis, A. (2026). "Does AI break the case for broad index investing? Replication package." Zenodo.
+> https://doi.org/10.5281/zenodo.24240516
 
 ## Disclaimer
 
