@@ -8,6 +8,7 @@ Replication package for the article by Agisilaos Papadogiannis (2026), forthcomi
 [doi:10.2139/ssrn.6058896](https://doi.org/10.2139/ssrn.6058896). The article is copyright
 PMR and its text is not distributed here; this repository holds the code and the data
 behind its empirical exhibits, so that every reported number can be reproduced.
+Title and abstract: `paper/abstract.pdf`.
 
 ## Abstract
 
@@ -31,6 +32,7 @@ with a global all-cap index as its fullest form.
 scripts/    the code (see below)
 data/       all input data, with sources and terms in data/README.md
 outputs/    results.json: every number reported in Exhibits 5 to 10
+paper/      title and abstract of the article (PDF and LaTeX source); the full text is not included
 ```
 
 ## Reproducing
@@ -40,6 +42,9 @@ statsmodels, matplotlib). `requirements-lock.txt` lists the exact versions under
 `outputs/results.json` was generated.
 
 ```bash
+git clone https://github.com/apapadogiannis/ai-broad-index-investing
+cd ai-broad-index-investing
+pip install -r requirements.txt
 ./run_all.sh    # a few seconds
 ```
 
