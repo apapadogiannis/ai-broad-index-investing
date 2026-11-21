@@ -137,7 +137,7 @@ Code: MIT License. `outputs/results.json`: CC BY 4.0, cite the article.
 
 Code and data:
 
-> Papadogiannis, A. (2026). "Does AI break the case for broad index investing? Replication package." Zenodo.
+> Papadogiannis, A. (2026). "Does AI break the case for broad index investing? Rent decay, private capital, and deflation. Replication package." Zenodo.
 > https://doi.org/10.5281/zenodo.24240516
 
 ## Disclaimer

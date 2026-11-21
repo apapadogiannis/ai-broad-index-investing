@@ -33,8 +33,8 @@
     "fields": {
       "exhibit5_roic_by_layer": "one record per layer of scarcity: `layer`; `industries` and `firms`, the number of US industries and firms in it; `roic`, the median after-tax return on invested capital, in per cent; `roic_adj`, the same adjusted for leases and R&D; `roic10`, the ten-year normalised figure",
       "exhibit6_sector_composition.groups": "share of market value in each group of sectors, in per cent, as a list in the order US, developed ex-US, emerging, world",
-      "exhibit6_sector_composition.slow": "summed share, in the same order, of the groups the article assigns to the slow pool together with industrials",
-      "exhibit6_sector_composition.region": "weight of each region in the world index, in per cent",
+      "exhibit6_sector_composition.slow": "summed share, in the same order, of three groups: financials and health care; energy, materials, utilities and real estate; industrials",
+      "exhibit6_sector_composition.region": "weight of each region in the world index, in per cent, under the keys US, DevexUS (developed markets outside the US), EM (emerging markets) and World",
       "exhibit7_fund_returns": "by fund ticker. `post_` figures cover the AI period, December 2022 to September 2026; `full_` figures cover January 2018, or the fund's first month if later, to September 2026. `_ann` is the compound annual total return, `_vol` the annualised standard deviation of monthly returns, `_dd` the largest fall from a peak on month-end values, all in per cent. `n_full` is the number of months in the full period",
       "exhibit8_membership_concentration.adds_per_year": "average number of companies added to the S&P 500 a year, by five-year period",
       "exhibit8_membership_concentration.ai_replacements_per_year": "the same for 2023 to August 2026",

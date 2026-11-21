@@ -31,13 +31,18 @@ files = [
   "paper/abstract.pdf: the title and abstract of the article. The full text is at the publisher.",
 ]
 read = [
+  "Returns, volatilities, drawdowns, weights and returns on capital are in per cent. Counts are whole numbers.",
   "The AI period starts in December 2022, the first full month after the release of ChatGPT, and ends in September 2026: 46 months. It is one period, chosen after the fact, and short.",
-  "Fund returns are total returns in US dollars from month-end data. A drawdown measured on month-end values is smaller than one measured on daily prices.",
+  "Fund returns are total returns in US dollars from month-end data. Volatility is the sample standard deviation of monthly returns times the square root of twelve.",
+  "A drawdown is the largest fall from an earlier month-end peak. The first peak is the end of the first month, so a loss in the first month itself is not counted, and a drawdown on month-end values is smaller than one on daily prices. For two funds whose first month was a loss (BITO, URA) the fall from the starting value is larger than the figure given.",
   "A fund launched after January 2018 has a shorter full period: check `n_full`. Its full-period figures are not comparable with those of funds that have all 105 months.",
   "In Exhibit 6 each list of four figures is in the order US, developed markets ex-US, emerging markets, world.",
+  "Exhibit 9 covers 11 of the 15 funds, those the article's table shows. `n` is one less than the fund's months, because the yield enters as a monthly change.",
   "In Exhibit 9 `beta` is the fund's return in per cent in a month in which the 10-year real yield rose by one percentage point. It is a co-movement over 2018 to 2026, not a causal effect.",
   "In Exhibit 10 a regime is a calendar year classified by its CPI inflation, December to December. Returns are averages of yearly real returns, not compound returns. Gold is measured from 1972, after its price was freed; there is no deflation year since then, so that cell is empty.",
-  "Returns on capital in Exhibit 5 are medians across industries weighted by the number of firms, not aggregates.",
+  "Returns on capital in Exhibit 5 are weighted medians: the industries of a layer are ordered by their return on capital and the figure is that of the industry at which half of the layer's firms is reached. They are not aggregates.",
+  "The four inflation regimes of Exhibit 10 are: deflation (below 0%), 0 to 2%, 2 to 4%, above 4%.",
+  "The keys of results.json are in alphabetical order, not in the order of the exhibits.",
 ]
 not_for = [
   "Current fund returns, weights or index membership. The figures are dated as above and the package is not updated.",
@@ -49,8 +54,8 @@ not_for = [
 [fields]
 "exhibit5_roic_by_layer" = "one record per layer of scarcity: `layer`; `industries` and `firms`, the number of US industries and firms in it; `roic`, the median after-tax return on invested capital, in per cent; `roic_adj`, the same adjusted for leases and R&D; `roic10`, the ten-year normalised figure"
 "exhibit6_sector_composition.groups" = "share of market value in each group of sectors, in per cent, as a list in the order US, developed ex-US, emerging, world"
-"exhibit6_sector_composition.slow" = "summed share, in the same order, of the groups the article assigns to the slow pool together with industrials"
-"exhibit6_sector_composition.region" = "weight of each region in the world index, in per cent"
+"exhibit6_sector_composition.slow" = "summed share, in the same order, of three groups: financials and health care; energy, materials, utilities and real estate; industrials"
+"exhibit6_sector_composition.region" = "weight of each region in the world index, in per cent, under the keys US, DevexUS (developed markets outside the US), EM (emerging markets) and World"
 "exhibit7_fund_returns" = "by fund ticker. `post_` figures cover the AI period, December 2022 to September 2026; `full_` figures cover January 2018, or the fund's first month if later, to September 2026. `_ann` is the compound annual total return, `_vol` the annualised standard deviation of monthly returns, `_dd` the largest fall from a peak on month-end values, all in per cent. `n_full` is the number of months in the full period"
 "exhibit8_membership_concentration.adds_per_year" = "average number of companies added to the S&P 500 a year, by five-year period"
 "exhibit8_membership_concentration.ai_replacements_per_year" = "the same for 2023 to August 2026"
