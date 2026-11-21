@@ -9,8 +9,8 @@
     "status": "forthcoming article",
     "article": {
       "journal": "The Journal of Beta Investment Strategies",
-      "year": 2027,
-      "status": "forthcoming"
+      "status": "forthcoming",
+      "year": 2027
     },
     "preprint": "https://doi.org/10.2139/ssrn.6058896",
     "repository": "https://github.com/apapadogiannis/ai-broad-index-investing",
