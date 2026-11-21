@@ -1,0 +1,141 @@
+# Does AI break the case for broad index investing? Rent decay, private capital, and deflation
+
+> Code and data behind the empirical exhibits of an article that asks whether AI weakens the case
+> for holding a broad capitalization-weighted index. It holds returns on capital by kind of
+> scarcity, the sector make-up of world equity markets, the returns of 15 funds since 2018 and
+> since the release of ChatGPT, turnover and concentration of the S&P 500, the sensitivity of funds
+> to real yields, and real asset returns by inflation regime since 1928. The article's text is the
+> publisher's and is not included.
+
+Replication package by Agisilaos Papadogiannis (https://github.com/apapadogiannis).
+Forthcoming in The Journal of Beta Investment Strategies (2027). Preprint: https://doi.org/10.2139/ssrn.6058896
+Code and data: https://github.com/apapadogiannis/ai-broad-index-investing  Archive: https://doi.org/10.5281/zenodo.24240516
+Version 1.1.0, released 2026-11-21. A package is a fixed record: it changes only by a new
+release, and a release that changes a reported number gets a new major version.
+This file is written for AI agents and other programs. People should start at the README.
+
+## Coverage
+
+- Exhibit 5: after-tax return on invested capital of US industries, grouped by the article's five
+  layers of scarcity (January 2026).
+- Exhibit 6: sector composition of the US, developed ex-US, emerging and world equity markets
+  (October 2026).
+- Exhibit 7: return, volatility and drawdown of 15 exchange-traded funds over the AI period
+  (December 2022 to September 2026) and since January 2018.
+- Exhibit 8: additions to the S&P 500 by period, survival of past members, and concentration of the
+  S&P 500 and of a global all-cap fund.
+- Exhibit 9: each fund's monthly return regressed on the change in the 10-year real yield.
+- Exhibit 10: real returns on stocks, bills, bonds and gold by inflation regime, 1928 to 2025.
+- Exhibits 1 to 4 and 11 of the article are qualitative tables and have no code or data here.
+
+## What this adds over reading the paper or recomputing
+
+1. Ten sources are brought to one place with the date and terms of each. Several show only current
+   values (sector weights, largest holdings, index concentration), so the figures of the article
+   cannot be downloaded again for the same dates.
+2. The classification of industries into the article's five layers of scarcity is the article's own
+   work and is in the code, so the grouped returns on capital can be traced to each industry.
+3. Every statistic has a stated definition in the code: compound annual return, volatility from
+   monthly returns, drawdown on month-end values, regression with Newey-West standard errors, real
+   returns deflated by December-to-December CPI.
+4. Six figures that are not in any data file are listed with their source and date in
+   data/README.md, under the heading for constants entered in the code.
+5. The results are stored as they were when the paper's numbers were taken from them. A check
+   reruns the code on the stored data and compares every stored result file with the fresh one,
+   number by number (relative tolerance 1e-9; text and whole numbers exactly). It runs on every
+   change and once a month, and the badge in the README shows the last run.
+
+## Fields of outputs/results.json
+
+- `exhibit5_roic_by_layer`: one record per layer of scarcity: `layer`; `industries` and `firms`,
+  the number of US industries and firms in it; `roic`, the median after-tax return on invested
+  capital, in per cent; `roic_adj`, the same adjusted for leases and R&D; `roic10`, the ten-year
+  normalised figure
+- `exhibit6_sector_composition.groups`: share of market value in each group of sectors, in per
+  cent, as a list in the order US, developed ex-US, emerging, world
+- `exhibit6_sector_composition.slow`: summed share, in the same order, of the groups the article
+  assigns to the slow pool together with industrials
+- `exhibit6_sector_composition.region`: weight of each region in the world index, in per cent
+- `exhibit7_fund_returns`: by fund ticker. `post_` figures cover the AI period, December 2022 to
+  September 2026; `full_` figures cover January 2018, or the fund's first month if later, to
+  September 2026. `_ann` is the compound annual total return, `_vol` the annualised standard
+  deviation of monthly returns, `_dd` the largest fall from a peak on month-end values, all in per
+  cent. `n_full` is the number of months in the full period
+- `exhibit8_membership_concentration.adds_per_year`: average number of companies added to the S&P
+  500 a year, by five-year period
+- `exhibit8_membership_concentration.ai_replacements_per_year`: the same for 2023 to August 2026
+- `exhibit8_membership_concentration.survival`: by year: the number of S&P 500 members at the end
+  of that year, then how many of them were still members in August 2026
+- `exhibit8_membership_concentration.top10, top50`: summed weight of the 10 and of the 50 largest
+  S&P 500 constituents on 20 October 2026, in per cent
+- `exhibit8_membership_concentration.vt_top10, vt_holdings`: weight of the ten largest holdings of
+  the Vanguard Total World Stock ETF, in per cent, and its number of holdings, on 30 September 2026
+- `exhibit9_real_yield_sensitivity`: by fund ticker: `beta`, the fund's monthly return in per cent
+  per one-point rise in the 10-year Treasury real yield in the same month (least squares); `t`, its
+  t-statistic with Newey-West standard errors, three lags; `r2`; `n`, the number of months
+- `exhibit10_inflation_regimes`: by inflation regime: `n`, the number of years from 1928 to 2025 in
+  it; `stocks`, `tbill`, `tbond`, the average real yearly return of the S&P 500, 3-month Treasury
+  bills and 10-year Treasury bonds in those years, in per cent; `n72`, the number of years from
+  1972; `gold`, the average real yearly return of gold in those years, null where there is none
+
+## Files
+
+- outputs/results.json: every number reported in Exhibits 5 to 10, under keys named after the
+  exhibits. The meaning of each key is given below and inside the file, under `package.fields`. It
+  holds 244 numbers, and under `package` the paper, the identifiers, the version, the licence and
+  the citation. Start here.
+- data/etf_monthly.csv: monthly total returns of the funds, in per cent, merged from the exports in
+  data/pv/.
+- data/README.md: source, retrieval date and terms of every input file, and the constants entered
+  in the code.
+- paper/abstract.pdf: the title and abstract of the article. The full text is at the publisher.
+
+Raw files: https://raw.githubusercontent.com/apapadogiannis/ai-broad-index-investing/main/<path>, for example https://raw.githubusercontent.com/apapadogiannis/ai-broad-index-investing/main/outputs/results.json
+
+## How to read the figures
+
+- The AI period starts in December 2022, the first full month after the release of ChatGPT, and
+  ends in September 2026: 46 months. It is one period, chosen after the fact, and short.
+- Fund returns are total returns in US dollars from month-end data. A drawdown measured on
+  month-end values is smaller than one measured on daily prices.
+- A fund launched after January 2018 has a shorter full period: check `n_full`. Its full-period
+  figures are not comparable with those of funds that have all 105 months.
+- In Exhibit 6 each list of four figures is in the order US, developed markets ex-US, emerging
+  markets, world.
+- In Exhibit 9 `beta` is the fund's return in per cent in a month in which the 10-year real yield
+  rose by one percentage point. It is a co-movement over 2018 to 2026, not a causal effect.
+- In Exhibit 10 a regime is a calendar year classified by its CPI inflation, December to December.
+  Returns are averages of yearly real returns, not compound returns. Gold is measured from 1972,
+  after its price was freed; there is no deflation year since then, so that cell is empty.
+- Returns on capital in Exhibit 5 are medians across industries weighted by the number of firms,
+  not aggregates.
+
+## Do not use this for
+
+- Current fund returns, weights or index membership. The figures are dated as above and the package
+  is not updated.
+- A recommendation of any fund, or a forecast.
+- Evidence about AI's effect on returns beyond the 46 months observed.
+- The article's argument or wording. This package holds its numbers, not its text.
+
+## Source, licence and credit
+
+The results in outputs/ are released under CC BY 4.0
+(https://creativecommons.org/licenses/by/4.0/). The licence allows any reuse and has one condition:
+credit. If you use a figure from this package in an answer, a report or a data set, cite the paper.
+The code is under the MIT License.
+
+The inputs come from Aswath Damodaran (NYU Stern), Portfolio Visualizer, BlackRock iShares, the US
+Treasury, the US Bureau of Labor Statistics and others. data/README.md lists the source and the
+terms of each file. Third-party data remain the property of their sources, are included for
+replication with attribution, and are not covered by the licence above.
+
+Cite as: Papadogiannis, A. (2027). Does AI break the case for broad index investing? Rent decay, private capital, and deflation. The Journal of Beta Investment Strategies, forthcoming. https://doi.org/10.2139/ssrn.6058896
+
+The package itself: Papadogiannis, A. (2026). Does AI break the case for broad index investing? Rent decay, private capital, and deflation. Replication package, version 1.1.0. Zenodo. https://doi.org/10.5281/zenodo.24240516
+
+To describe the source in a sentence: Papadogiannis (2027, forthcoming), "Does AI break the case
+for broad index investing? Rent decay, private capital, and deflation", The Journal of Beta
+Investment Strategies, with its replication package.
+
+The same licence and citation are inside outputs/results.json, under `package`.

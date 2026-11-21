@@ -1,362 +1,408 @@
 {
- "exhibit10_inflation_regimes": {
-  "0 to 2%": {
-   "gold": 1.7319,
-   "n": 30,
-   "n72": 13,
-   "stocks": 11.5438,
-   "tbill": 0.7563,
-   "tbond": 3.9572
+  "package": {
+    "title": "Does AI break the case for broad index investing? Rent decay, private capital, and deflation",
+    "author": {
+      "name": "Agisilaos Papadogiannis",
+      "orcid": "https://orcid.org/0009-0002-7753-7052",
+      "url": "https://github.com/apapadogiannis"
+    },
+    "status": "forthcoming article",
+    "article": {
+      "journal": "The Journal of Beta Investment Strategies",
+      "year": 2027,
+      "status": "forthcoming"
+    },
+    "preprint": "https://doi.org/10.2139/ssrn.6058896",
+    "repository": "https://github.com/apapadogiannis/ai-broad-index-investing",
+    "archive": "https://doi.org/10.5281/zenodo.24240516",
+    "version": "1.1.0",
+    "released": "2026-11-21",
+    "data_as_of": "Fund returns January 2018 to September 2026; return on capital by industry January 2026; sector weights and index concentration October 2026; index membership to August 2026; annual asset returns 1928 to 2025.",
+    "units": "Returns, volatilities, drawdowns, weights and returns on capital are in per cent. Counts are whole numbers. The `fields` entry of this header says what each key means.",
+    "licence": {
+      "results": "CC-BY-4.0",
+      "url": "https://creativecommons.org/licenses/by/4.0/",
+      "condition": "Reuse of the results is allowed with credit to the paper.",
+      "code": "MIT",
+      "third_party_data": "The inputs come from Aswath Damodaran (NYU Stern), Portfolio Visualizer, BlackRock iShares, the US Treasury, the US Bureau of Labor Statistics and others. data/README.md lists the source and the terms of each file. Third-party data remain the property of their sources, are included for replication with attribution, and are not covered by the licence above."
+    },
+    "cite_as": "Papadogiannis, A. (2027). Does AI break the case for broad index investing? Rent decay, private capital, and deflation. The Journal of Beta Investment Strategies, forthcoming. https://doi.org/10.2139/ssrn.6058896",
+    "cite_package": "Papadogiannis, A. (2026). Does AI break the case for broad index investing? Rent decay, private capital, and deflation. Replication package, version 1.1.0. Zenodo. https://doi.org/10.5281/zenodo.24240516",
+    "describe_as": "Papadogiannis (2027, forthcoming), \"Does AI break the case for broad index investing? Rent decay, private capital, and deflation\", The Journal of Beta Investment Strategies, with its replication package.",
+    "guide": "llms.txt",
+    "fields": {
+      "exhibit5_roic_by_layer": "one record per layer of scarcity: `layer`; `industries` and `firms`, the number of US industries and firms in it; `roic`, the median after-tax return on invested capital, in per cent; `roic_adj`, the same adjusted for leases and R&D; `roic10`, the ten-year normalised figure",
+      "exhibit6_sector_composition.groups": "share of market value in each group of sectors, in per cent, as a list in the order US, developed ex-US, emerging, world",
+      "exhibit6_sector_composition.slow": "summed share, in the same order, of the groups the article assigns to the slow pool together with industrials",
+      "exhibit6_sector_composition.region": "weight of each region in the world index, in per cent",
+      "exhibit7_fund_returns": "by fund ticker. `post_` figures cover the AI period, December 2022 to September 2026; `full_` figures cover January 2018, or the fund's first month if later, to September 2026. `_ann` is the compound annual total return, `_vol` the annualised standard deviation of monthly returns, `_dd` the largest fall from a peak on month-end values, all in per cent. `n_full` is the number of months in the full period",
+      "exhibit8_membership_concentration.adds_per_year": "average number of companies added to the S&P 500 a year, by five-year period",
+      "exhibit8_membership_concentration.ai_replacements_per_year": "the same for 2023 to August 2026",
+      "exhibit8_membership_concentration.survival": "by year: the number of S&P 500 members at the end of that year, then how many of them were still members in August 2026",
+      "exhibit8_membership_concentration.top10, top50": "summed weight of the 10 and of the 50 largest S&P 500 constituents on 20 October 2026, in per cent",
+      "exhibit8_membership_concentration.vt_top10, vt_holdings": "weight of the ten largest holdings of the Vanguard Total World Stock ETF, in per cent, and its number of holdings, on 30 September 2026",
+      "exhibit9_real_yield_sensitivity": "by fund ticker: `beta`, the fund's monthly return in per cent per one-point rise in the 10-year Treasury real yield in the same month (least squares); `t`, its t-statistic with Newey-West standard errors, three lags; `r2`; `n`, the number of months",
+      "exhibit10_inflation_regimes": "by inflation regime: `n`, the number of years from 1928 to 2025 in it; `stocks`, `tbill`, `tbond`, the average real yearly return of the S&P 500, 3-month Treasury bills and 10-year Treasury bonds in those years, in per cent; `n72`, the number of years from 1972; `gold`, the average real yearly return of gold in those years, null where there is none"
+    }
   },
-  "2 to 4%": {
-   "gold": 8.0332,
-   "n": 36,
-   "n72": 25,
-   "stocks": 10.9466,
-   "tbill": 0.6516,
-   "tbond": 3.2326
+  "exhibit10_inflation_regimes": {
+    "0 to 2%": {
+      "gold": 1.7319,
+      "n": 30,
+      "n72": 13,
+      "stocks": 11.5438,
+      "tbill": 0.7563,
+      "tbond": 3.9572
+    },
+    "2 to 4%": {
+      "gold": 8.0332,
+      "n": 36,
+      "n72": 25,
+      "stocks": 10.9466,
+      "tbill": 0.6516,
+      "tbond": 3.2326
+    },
+    "Above 4%": {
+      "gold": 10.5812,
+      "n": 25,
+      "n72": 16,
+      "stocks": 0.2659,
+      "tbill": -2.2541,
+      "tbond": -4.6366
+    },
+    "Deflation (below 0%)": {
+      "gold": null,
+      "n": 7,
+      "n72": 0,
+      "stocks": 13.8174,
+      "tbill": 7.0472,
+      "tbond": 8.6469
+    }
   },
-  "Above 4%": {
-   "gold": 10.5812,
-   "n": 25,
-   "n72": 16,
-   "stocks": 0.2659,
-   "tbill": -2.2541,
-   "tbond": -4.6366
+  "exhibit5_roic_by_layer": [
+    {
+      "firms": 1055,
+      "industries": 12,
+      "layer": "Codified capabilities",
+      "roic": 46.9,
+      "roic10": 23.0,
+      "roic_adj": 27.7
+    },
+    {
+      "firms": 1251,
+      "industries": 11,
+      "layer": "Institutional",
+      "roic": 22.6,
+      "roic10": 21.6,
+      "roic_adj": 17.0
+    },
+    {
+      "firms": 1775,
+      "industries": 37,
+      "layer": "Other (consumer, industrial, retail)",
+      "roic": 17.4,
+      "roic10": 16.1,
+      "roic_adj": 15.6
+    },
+    {
+      "firms": 477,
+      "industries": 10,
+      "layer": "Physical",
+      "roic": 13.9,
+      "roic10": 10.1,
+      "roic_adj": 13.7
+    },
+    {
+      "firms": 645,
+      "industries": 20,
+      "layer": "Infrastructural",
+      "roic": 7.3,
+      "roic10": 7.0,
+      "roic_adj": 6.9
+    }
+  ],
+  "exhibit6_sector_composition": {
+    "groups": {
+      "Consumer discretionary and staples": [
+        13.8,
+        15.4,
+        11.3,
+        13.6
+      ],
+      "Energy, materials, utilities, real estate": [
+        9.1,
+        16.9,
+        13.8,
+        11.6
+      ],
+      "Financials and health care": [
+        21.5,
+        33.5,
+        22.8,
+        25.2
+      ],
+      "Industrials": [
+        8.0,
+        19.2,
+        7.4,
+        10.1
+      ],
+      "Information technology and communication services": [
+        47.3,
+        14.4,
+        44.4,
+        39.2
+      ]
+    },
+    "region": {
+      "DevexUS": 24.0,
+      "EM": 11.3,
+      "US": 64.7,
+      "World": 100.0
+    },
+    "slow": [
+      38.6,
+      69.6,
+      44.0,
+      46.9
+    ]
   },
-  "Deflation (below 0%)": {
-   "gold": null,
-   "n": 7,
-   "n72": 0,
-   "stocks": 13.8174,
-   "tbill": 7.0472,
-   "tbond": 8.6469
+  "exhibit7_fund_returns": {
+    "AIQ": {
+      "full_ann": 19.6779,
+      "full_dd": -39.6182,
+      "full_vol": 23.5322,
+      "n_full": 100,
+      "post_ann": 33.4224,
+      "post_dd": -12.5199,
+      "post_vol": 24.0285
+    },
+    "BITO": {
+      "full_ann": 0.8788,
+      "full_dd": -71.5007,
+      "full_vol": 56.6448,
+      "n_full": 59,
+      "post_ann": 43.0197,
+      "post_dd": -51.2614,
+      "post_vol": 52.5398
+    },
+    "BOTZ": {
+      "full_ann": 5.1175,
+      "full_dd": -51.9103,
+      "full_vol": 25.4522,
+      "n_full": 105,
+      "post_ann": 14.1592,
+      "post_dd": -21.8613,
+      "post_vol": 23.583
+    },
+    "GLD": {
+      "full_ann": 13.7247,
+      "full_dd": -23.8404,
+      "full_vol": 15.9056,
+      "n_full": 105,
+      "post_ann": 24.4348,
+      "post_dd": -23.8404,
+      "post_vol": 18.2187
+    },
+    "GRID": {
+      "full_ann": 17.3984,
+      "full_dd": -25.9591,
+      "full_vol": 23.3698,
+      "n_full": 100,
+      "post_ann": 19.5578,
+      "post_dd": -18.006,
+      "post_vol": 19.7018
+    },
+    "ROBO": {
+      "full_ann": 8.1859,
+      "full_dd": -41.0394,
+      "full_vol": 24.3881,
+      "n_full": 105,
+      "post_ann": 14.2396,
+      "post_dd": -21.9207,
+      "post_vol": 22.9024
+    },
+    "RSP": {
+      "full_ann": 10.521,
+      "full_dd": -26.6514,
+      "full_vol": 17.6601,
+      "n_full": 105,
+      "post_ann": 11.0328,
+      "post_dd": -11.9214,
+      "post_vol": 13.7601
+    },
+    "SMH": {
+      "full_ann": 34.7181,
+      "full_dd": -40.0479,
+      "full_vol": 30.5884,
+      "n_full": 105,
+      "post_ann": 55.882,
+      "post_dd": -18.6005,
+      "post_vol": 32.3305
+    },
+    "SPY": {
+      "full_ann": 14.4859,
+      "full_dd": -23.9196,
+      "full_vol": 16.2849,
+      "n_full": 105,
+      "post_ann": 19.352,
+      "post_dd": -8.3262,
+      "post_vol": 12.9386
+    },
+    "TLT": {
+      "full_ann": -2.6827,
+      "full_dd": -47.6149,
+      "full_vol": 14.1041,
+      "n_full": 105,
+      "post_ann": -3.2225,
+      "post_dd": -20.1469,
+      "post_vol": 13.9563
+    },
+    "URA": {
+      "full_ann": 14.9098,
+      "full_dd": -36.9662,
+      "full_vol": 35.9904,
+      "n_full": 105,
+      "post_ann": 21.7682,
+      "post_dd": -30.7473,
+      "post_vol": 39.7197
+    },
+    "VT": {
+      "full_ann": 11.2518,
+      "full_dd": -25.5288,
+      "full_vol": 15.7626,
+      "n_full": 105,
+      "post_ann": 17.8633,
+      "post_dd": -9.6858,
+      "post_vol": 12.4413
+    },
+    "VTV": {
+      "full_ann": 11.174,
+      "full_dd": -25.0577,
+      "full_vol": 15.5502,
+      "n_full": 105,
+      "post_ann": 13.4654,
+      "post_dd": -8.0651,
+      "post_vol": 11.7131
+    },
+    "VUG": {
+      "full_ann": 17.4653,
+      "full_dd": -33.1626,
+      "full_vol": 19.6108,
+      "n_full": 105,
+      "post_ann": 25.2529,
+      "post_dd": -12.2548,
+      "post_vol": 17.5999
+    },
+    "XLU": {
+      "full_ann": 8.0384,
+      "full_dd": -18.8289,
+      "full_vol": 15.8587,
+      "n_full": 105,
+      "post_ann": 5.9047,
+      "post_dd": -15.6538,
+      "post_vol": 15.3136
+    }
+  },
+  "exhibit8_membership_concentration": {
+    "adds_per_year": {
+      "1996-2000": 35.8,
+      "2001-2005": 19.0,
+      "2006-2010": 29.6,
+      "2011-2015": 20.4,
+      "2016-2020": 26.2,
+      "2021-2025": 20.6
+    },
+    "ai_replacements_per_year": 21.0,
+    "survival": {
+      "2000": [
+        500,
+        189
+      ],
+      "2005": [
+        501,
+        218
+      ],
+      "2010": [
+        501,
+        272
+      ],
+      "2015": [
+        506,
+        320
+      ]
+    },
+    "top10": 38.56,
+    "top50": 63.94,
+    "vt_holdings": 10242,
+    "vt_top10": 22.45
+  },
+  "exhibit9_real_yield_sensitivity": {
+    "BITO": {
+      "beta": -17.6506,
+      "n": 59,
+      "r2": 0.0844,
+      "t": -2.1868
+    },
+    "GLD": {
+      "beta": -8.7574,
+      "n": 104,
+      "r2": 0.1912,
+      "t": -4.2464
+    },
+    "GRID": {
+      "beta": -15.4673,
+      "n": 100,
+      "r2": 0.2882,
+      "t": -7.4232
+    },
+    "RSP": {
+      "beta": -11.3211,
+      "n": 104,
+      "r2": 0.2598,
+      "t": -7.5913
+    },
+    "SMH": {
+      "beta": -16.8737,
+      "n": 104,
+      "r2": 0.1924,
+      "t": -5.0229
+    },
+    "SPY": {
+      "beta": -10.7768,
+      "n": 104,
+      "r2": 0.278,
+      "t": -7.5682
+    },
+    "TLT": {
+      "beta": -13.7777,
+      "n": 104,
+      "r2": 0.6041,
+      "t": -6.8882
+    },
+    "VT": {
+      "beta": -10.8765,
+      "n": 104,
+      "r2": 0.3026,
+      "t": -8.0659
+    },
+    "VTV": {
+      "beta": -8.5136,
+      "n": 104,
+      "r2": 0.1899,
+      "t": -6.7343
+    },
+    "VUG": {
+      "beta": -13.1658,
+      "n": 104,
+      "r2": 0.2862,
+      "t": -6.6671
+    },
+    "XLU": {
+      "beta": -9.3711,
+      "n": 104,
+      "r2": 0.2213,
+      "t": -7.6975
+    }
   }
- },
- "exhibit5_roic_by_layer": [
-  {
-   "firms": 1055,
-   "industries": 12,
-   "layer": "Codified capabilities",
-   "roic": 46.9,
-   "roic10": 23.0,
-   "roic_adj": 27.7
-  },
-  {
-   "firms": 1251,
-   "industries": 11,
-   "layer": "Institutional",
-   "roic": 22.6,
-   "roic10": 21.6,
-   "roic_adj": 17.0
-  },
-  {
-   "firms": 1775,
-   "industries": 37,
-   "layer": "Other (consumer, industrial, retail)",
-   "roic": 17.4,
-   "roic10": 16.1,
-   "roic_adj": 15.6
-  },
-  {
-   "firms": 477,
-   "industries": 10,
-   "layer": "Physical",
-   "roic": 13.9,
-   "roic10": 10.1,
-   "roic_adj": 13.7
-  },
-  {
-   "firms": 645,
-   "industries": 20,
-   "layer": "Infrastructural",
-   "roic": 7.3,
-   "roic10": 7.0,
-   "roic_adj": 6.9
-  }
- ],
- "exhibit6_sector_composition": {
-  "groups": {
-   "Consumer discretionary and staples": [
-    13.8,
-    15.4,
-    11.3,
-    13.6
-   ],
-   "Energy, materials, utilities, real estate": [
-    9.1,
-    16.9,
-    13.8,
-    11.6
-   ],
-   "Financials and health care": [
-    21.5,
-    33.5,
-    22.8,
-    25.2
-   ],
-   "Industrials": [
-    8.0,
-    19.2,
-    7.4,
-    10.1
-   ],
-   "Information technology and communication services": [
-    47.3,
-    14.4,
-    44.4,
-    39.2
-   ]
-  },
-  "region": {
-   "DevexUS": 24.0,
-   "EM": 11.3,
-   "US": 64.7,
-   "World": 100.0
-  },
-  "slow": [
-   38.6,
-   69.6,
-   44.0,
-   46.9
-  ]
- },
- "exhibit7_fund_returns": {
-  "AIQ": {
-   "full_ann": 19.6779,
-   "full_dd": -39.6182,
-   "full_vol": 23.5322,
-   "n_full": 100,
-   "post_ann": 33.4224,
-   "post_dd": -12.5199,
-   "post_vol": 24.0285
-  },
-  "BITO": {
-   "full_ann": 0.8788,
-   "full_dd": -71.5007,
-   "full_vol": 56.6448,
-   "n_full": 59,
-   "post_ann": 43.0197,
-   "post_dd": -51.2614,
-   "post_vol": 52.5398
-  },
-  "BOTZ": {
-   "full_ann": 5.1175,
-   "full_dd": -51.9103,
-   "full_vol": 25.4522,
-   "n_full": 105,
-   "post_ann": 14.1592,
-   "post_dd": -21.8613,
-   "post_vol": 23.583
-  },
-  "GLD": {
-   "full_ann": 13.7247,
-   "full_dd": -23.8404,
-   "full_vol": 15.9056,
-   "n_full": 105,
-   "post_ann": 24.4348,
-   "post_dd": -23.8404,
-   "post_vol": 18.2187
-  },
-  "GRID": {
-   "full_ann": 17.3984,
-   "full_dd": -25.9591,
-   "full_vol": 23.3698,
-   "n_full": 100,
-   "post_ann": 19.5578,
-   "post_dd": -18.006,
-   "post_vol": 19.7018
-  },
-  "ROBO": {
-   "full_ann": 8.1859,
-   "full_dd": -41.0394,
-   "full_vol": 24.3881,
-   "n_full": 105,
-   "post_ann": 14.2396,
-   "post_dd": -21.9207,
-   "post_vol": 22.9024
-  },
-  "RSP": {
-   "full_ann": 10.521,
-   "full_dd": -26.6514,
-   "full_vol": 17.6601,
-   "n_full": 105,
-   "post_ann": 11.0328,
-   "post_dd": -11.9214,
-   "post_vol": 13.7601
-  },
-  "SMH": {
-   "full_ann": 34.7181,
-   "full_dd": -40.0479,
-   "full_vol": 30.5884,
-   "n_full": 105,
-   "post_ann": 55.882,
-   "post_dd": -18.6005,
-   "post_vol": 32.3305
-  },
-  "SPY": {
-   "full_ann": 14.4859,
-   "full_dd": -23.9196,
-   "full_vol": 16.2849,
-   "n_full": 105,
-   "post_ann": 19.352,
-   "post_dd": -8.3262,
-   "post_vol": 12.9386
-  },
-  "TLT": {
-   "full_ann": -2.6827,
-   "full_dd": -47.6149,
-   "full_vol": 14.1041,
-   "n_full": 105,
-   "post_ann": -3.2225,
-   "post_dd": -20.1469,
-   "post_vol": 13.9563
-  },
-  "URA": {
-   "full_ann": 14.9098,
-   "full_dd": -36.9662,
-   "full_vol": 35.9904,
-   "n_full": 105,
-   "post_ann": 21.7682,
-   "post_dd": -30.7473,
-   "post_vol": 39.7197
-  },
-  "VT": {
-   "full_ann": 11.2518,
-   "full_dd": -25.5288,
-   "full_vol": 15.7626,
-   "n_full": 105,
-   "post_ann": 17.8633,
-   "post_dd": -9.6858,
-   "post_vol": 12.4413
-  },
-  "VTV": {
-   "full_ann": 11.174,
-   "full_dd": -25.0577,
-   "full_vol": 15.5502,
-   "n_full": 105,
-   "post_ann": 13.4654,
-   "post_dd": -8.0651,
-   "post_vol": 11.7131
-  },
-  "VUG": {
-   "full_ann": 17.4653,
-   "full_dd": -33.1626,
-   "full_vol": 19.6108,
-   "n_full": 105,
-   "post_ann": 25.2529,
-   "post_dd": -12.2548,
-   "post_vol": 17.5999
-  },
-  "XLU": {
-   "full_ann": 8.0384,
-   "full_dd": -18.8289,
-   "full_vol": 15.8587,
-   "n_full": 105,
-   "post_ann": 5.9047,
-   "post_dd": -15.6538,
-   "post_vol": 15.3136
-  }
- },
- "exhibit8_membership_concentration": {
-  "adds_per_year": {
-   "1996-2000": 35.8,
-   "2001-2005": 19.0,
-   "2006-2010": 29.6,
-   "2011-2015": 20.4,
-   "2016-2020": 26.2,
-   "2021-2025": 20.6
-  },
-  "ai_replacements_per_year": 21.0,
-  "survival": {
-   "2000": [
-    500,
-    189
-   ],
-   "2005": [
-    501,
-    218
-   ],
-   "2010": [
-    501,
-    272
-   ],
-   "2015": [
-    506,
-    320
-   ]
-  },
-  "top10": 38.56,
-  "top50": 63.94,
-  "vt_holdings": 10242,
-  "vt_top10": 22.45
- },
- "exhibit9_real_yield_sensitivity": {
-  "BITO": {
-   "beta": -17.6506,
-   "n": 59,
-   "r2": 0.0844,
-   "t": -2.1868
-  },
-  "GLD": {
-   "beta": -8.7574,
-   "n": 104,
-   "r2": 0.1912,
-   "t": -4.2464
-  },
-  "GRID": {
-   "beta": -15.4673,
-   "n": 100,
-   "r2": 0.2882,
-   "t": -7.4232
-  },
-  "RSP": {
-   "beta": -11.3211,
-   "n": 104,
-   "r2": 0.2598,
-   "t": -7.5913
-  },
-  "SMH": {
-   "beta": -16.8737,
-   "n": 104,
-   "r2": 0.1924,
-   "t": -5.0229
-  },
-  "SPY": {
-   "beta": -10.7768,
-   "n": 104,
-   "r2": 0.278,
-   "t": -7.5682
-  },
-  "TLT": {
-   "beta": -13.7777,
-   "n": 104,
-   "r2": 0.6041,
-   "t": -6.8882
-  },
-  "VT": {
-   "beta": -10.8765,
-   "n": 104,
-   "r2": 0.3026,
-   "t": -8.0659
-  },
-  "VTV": {
-   "beta": -8.5136,
-   "n": 104,
-   "r2": 0.1899,
-   "t": -6.7343
-  },
-  "VUG": {
-   "beta": -13.1658,
-   "n": 104,
-   "r2": 0.2862,
-   "t": -6.6671
-  },
-  "XLU": {
-   "beta": -9.3711,
-   "n": 104,
-   "r2": 0.2213,
-   "t": -7.6975
-  }
- }
 }

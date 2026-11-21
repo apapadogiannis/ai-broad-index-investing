@@ -6,8 +6,17 @@
 
 Replication package for the article by Agisilaos Papadogiannis, forthcoming in *The Journal of Beta Investment Strategies* (2027).
 Title and abstract: `paper/abstract.pdf`; also on SSRN: [doi:10.2139/ssrn.6058896](https://doi.org/10.2139/ssrn.6058896).
-Archived on Zenodo: [doi:10.5281/zenodo.24240516](https://doi.org/10.5281/zenodo.24240516) (v1.0).
+Archived on Zenodo: [doi:10.5281/zenodo.24240516](https://doi.org/10.5281/zenodo.24240516) (v1.1.0).
 The article is copyright PMR and its text is not distributed here; this repository holds the code and the data behind its empirical exhibits, so that every reported number can be reproduced.
+
+## For AI agents and programs
+
+Read [`llms.txt`](llms.txt) first. It says what the package holds, what it adds over reading the
+article or recomputing, what each field means and what not to use it for. The numbers are in
+[`outputs/results.json`](outputs/results.json), which carries the article, the identifiers, the
+version, the licence, the citation and the meaning of every key under its `package` key. The guide
+and the header are written by `scripts/make_guide.py` from `CITATION.cff`, `guide.toml` and the
+results, and are covered by the check.
 
 ## What this is
 
@@ -31,6 +40,7 @@ with a global all-cap index as its fullest form.
 scripts/    the code (see below)
 data/       all input data, with sources and terms in data/README.md
 outputs/    results.json: every number reported in Exhibits 5 to 10
+llms.txt    guide for AI agents and programs, generated; guide.toml holds its statements about this package
 paper/      title and abstract of the article (PDF and LaTeX source); the full text is not included
 ```
 
@@ -62,6 +72,7 @@ workflow re-runs the pipeline on every push and once a month and fails if a stor
 | | S&P 500 replacements, survival of past members, concentration | Exhibit 8 |
 | | Fund return per one-point rise in the 10-year real yield (OLS, Newey-West, 3 lags) | Exhibit 9 |
 | | Real returns on stocks, bills, bonds and gold by inflation regime, 1928 to 2025 | Exhibit 10 |
+| `make_guide.py` | The `package` header of `outputs/results.json` and `llms.txt` | not in the article |
 | `fig1_five_layers.py` | The five layers of scarcity (schematic) | Figure 1 |
 | `fig2_rent_value.py` | Value of a dollar of rent by decay rate (illustrative) | Figure 2 |
 
@@ -75,11 +86,12 @@ September 2026.
 ## How the check works
 
 ```bash
-python3 check_outputs.py --also data/etf_monthly.csv    # reruns ./run_all.sh, then compares
+python3 check_outputs.py --also data/etf_monthly.csv --also llms.txt    # reruns ./run_all.sh, then compares
 ```
 
-1. `outputs/results.json` and `data/etf_monthly.csv` are stored in this repository exactly as they were when the
-   article's numbers were taken from them.
+1. `outputs/results.json` and `data/etf_monthly.csv` are stored in this repository with the article's numbers exactly as they
+   were when the article took them. Since v1.1.0 `results.json` also carries a `package` header (article,
+   identifiers, version, licence, citation, meaning of the keys); no number was changed. `llms.txt` is checked the same way.
 2. `check_outputs.py` sets the stored copies aside, reruns `./run_all.sh` on the files in `data/`,
    and compares the fresh files with the stored ones, number by number.
 3. A number counts as reproduced if it agrees with the stored one to nine significant digits
